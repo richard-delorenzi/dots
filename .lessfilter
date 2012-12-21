@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if test -d "$1"
+then
+  ls -Flh "$1"
+  exit 0
+fi
+
+exit 1
