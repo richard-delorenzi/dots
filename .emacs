@@ -14,10 +14,9 @@
  '(font-lock-comment-face ((((class color) (background light)) (:foreground "Firebrick"))))
  '(font-lock-constant-face ((((class color) (background light)) (:foreground "CadetBlue" :slant italic))))
  '(font-lock-keyword-face ((t (:foreground "Purple" :weight bold))))
- '(font-lock-string-face ((t (:foreground "RosyBrown" :slant italic))))
+ '(font-lock-string-face ((t (:foreground "red" :slant italic))))
  '(font-lock-type-face ((t (:foreground "ForestGreen"))))
- '(font-lock-warning-face ((t (:foreground "Red" :weight bold))))
-)
+ '(font-lock-warning-face ((t (:foreground "Red" :weight bold)))))
 
 ;;where to find some packages
 (let ((default-directory "~/.emacs.d/site-lisp/"))
