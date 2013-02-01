@@ -30,8 +30,7 @@ function cd_prompt
 # don't put duplicate lines in the history. See bash(1) for more options
 HISTCONTROL=ignorespace:ignoredups:erasedups
 HISTFILESIZE=99999
-
-
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # append to the history file, don't overwrite it
 shopt -s histappend
 #history
