@@ -30,7 +30,7 @@ fi
 export HTML_TIDY=~/.htmltidy
 
 # eiffel
-export ISE_EIFFEL=/opt/Eiffel70
+export ISE_EIFFEL=/opt/Eiffel72
 export ISE_PLATFORM=linux-x86
 export SMARTEIFFEL=/opt/SmartEiffel
 
