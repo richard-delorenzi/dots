@@ -291,3 +291,7 @@ function emacs_setcompilercommand() {
     echo "loading highlight config"
     emacsdoit "(ctypes-read-file \"$(pwd)/emacs.ctypes\")"
 }
+
+export http_proxy=http://localhost:3128
+export https_proxy=http_proxy
+
