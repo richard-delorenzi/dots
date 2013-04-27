@@ -1,0 +1,3 @@
+[extensions]
+hgext.bookmarks =
+hgext.git = 
