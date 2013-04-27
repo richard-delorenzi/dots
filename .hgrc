@@ -1,3 +1,6 @@
+[ui]
+username=richard.delorenzi
+
 [extensions]
 hgext.bookmarks =
 hgext.git = 
