@@ -4,3 +4,13 @@ username=richard.delorenzi
 [extensions]
 hgext.bookmarks =
 hgext.git = 
+color = 
+relink = 
+bookmarks = 
+git = 
+progress = 
+churn =
+inotify =
+
+[bookmarks]
+track.current = True
