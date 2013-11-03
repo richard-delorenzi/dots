@@ -39,4 +39,7 @@ export PATH=$SMARTEIFFEL/bin:$PATH:$ISE_EIFFEL/studio/spec/$ISE_PLATFORM/bin
 #stuff for Xcompose 
 export GTK_IM_MODULE="xim"
 
+#sudo
+export SUDO_EDITOR='gedit'
+
 
