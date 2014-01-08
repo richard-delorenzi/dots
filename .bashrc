@@ -52,6 +52,9 @@ shopt -s autocd
 shopt -s dirspell
 shopt -s extglob
 
+#don't auto complete hidden files
+bind 'set match-hidden-files off'
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
