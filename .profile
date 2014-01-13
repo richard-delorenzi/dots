@@ -42,4 +42,3 @@ export GTK_IM_MODULE="xim"
 #sudo
 export SUDO_EDITOR='gedit'
 
-
