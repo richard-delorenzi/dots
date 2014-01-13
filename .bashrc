@@ -52,6 +52,9 @@ shopt -s autocd
 shopt -s dirspell
 shopt -s extglob
 
+#language
+export LANG=en_GB.utf8
+
 #don't auto complete hidden files
 bind 'set match-hidden-files off'
 
