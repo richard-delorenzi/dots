@@ -130,6 +130,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias rmtil='rm *.~+([0-9])~'
+alias rotd='pushd +1'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
