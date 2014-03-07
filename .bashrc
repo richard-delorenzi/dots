@@ -148,7 +148,27 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias edit='emacsclient --alternate-editor="" --no-wait $*'
+#alias edit='emacsclient --alternate-editor="" --no-wait $*'
+function edit {
+    #this method gives a differant emacs server to each X11 virtual desktop
+    desktop=$(xprop -id $WINDOWID | sed -rn -e  's/_NET_WM_DESKTOP\(CARDINAL\) = ([^)]+)/\1/pg')
+    if test "z${desktop}" != "z"
+    then
+        server="desktop${desktop}"
+    else
+        server="server" #use this server if can't find virtual desktop
+    fi
+
+    echo server=$server
+
+    emacsclient -s "${server}" $*
+    if test  "z$PIPESTATUS" != "z0"
+    then
+        lisp="(setq server-name '\"${server}\")"
+	emacs --daemon --eval "$lisp"
+        emacsclient -s "${server}" $*
+    fi
+}
 
 
 ################################################################
