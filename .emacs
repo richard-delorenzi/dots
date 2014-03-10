@@ -5,6 +5,8 @@
   ;; If there is more than one, they won't work right.
  '(global-visual-line-mode t)
  '(save-place t nil (saveplace))
+ '(server-mode t)
+ '(tab-stop-list (quote (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
  '(visual-line-fringe-indicators (quote (left-curly-arrow right-curly-arrow))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
@@ -428,6 +430,9 @@
 ;;python Maybe
 ;(setq ipython-command "C:\\Python24\\python c:\\Python24\\Scripts\\ipython")
 ;(require 'ipython) 
+
+(add-to-list 'load-path "~/.emacs.d/vendor/mustache-mode.el")
+(require 'mustache-mode)
 
 
 

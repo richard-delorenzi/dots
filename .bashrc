@@ -161,12 +161,12 @@ function edit {
 
     echo server=$server
 
-    emacsclient -s "${server}" $*
+    emacsclient --no-wait -s "${server}" "$@"
     if test  "z$PIPESTATUS" != "z0"
     then
         lisp="(setq server-name '\"${server}\")"
 	emacs --daemon --eval "$lisp"
-        emacsclient -s "${server}" $*
+        emacsclient --no-wait -s "${server}" "$@"
     fi
 }
 
