@@ -1,6 +1,6 @@
 [ui]
 username=richard.delorenzi
-ignore=~/.hgignore
+ignore=~/.hgignore-global
 
 [extensions]
 hgext.bookmarks =
