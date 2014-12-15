@@ -1,17 +1,108 @@
 [ui]
+ignore = ~/.hgignore
+
+[ui]
 username=richard.delorenzi
-ignore=~/.hgignore-global
+merge = kdiff3
 
 [extensions]
 hgext.bookmarks =
 hgext.git = 
-color = 
+color =
 relink = 
 bookmarks = 
 git = 
-progress = 
+progress =
 churn =
 inotify =
+rebase = 
+children = 
+graphlog = 
+purge = 
+record = 
+hgk = 
+hgview = 
+mq = 
+share = 
+hgext.zipdoc = ~/bin/zipdoc.py
+acl = 
+extdiff = 
+largefiles = 
+pager =
+transplant = 
+ 
+[encode]
+# Office Open XML
+**.docx = zipdocencode
+**.docm = zipdocencode
+**.dotx = zipdocencode
+**.dotm = zipdocencode
+**.xlsx = zipdocencode
+**.xlsm = zipdocencode
+**.xltx = zipdocencode
+**.xltm = zipdocencode
+**.xlsb = zipdocencode
+**.xlam = zipdocencode
+**.pptx = zipdocencode
+**.pptm = zipdocencode
+**.potx = zipdocencode
+**.potm = zipdocencode
+**.ppam = zipdocencode
+**.ppsx = zipdocencode
+**.ppsm = zipdocencode
+# OpenDocument (ODF)
+**.odt = zipdocencode
+**.odt = zipdocencode
+**.ods = zipdocencode
+**.odp = zipdocencode
+**.odb = zipdocencode
+**.odg = zipdocencode
+**.odf = zipdocencode
+# other
+**.xps = zipdocencode
+**.oxps = zipdocencode
+**.epub = zipdocencode
+ 
+[decode]
+# Office Open XML
+**.docx = zipdocdecode
+**.docm = zipdocdecode
+**.dotx = zipdocdecode
+**.dotm = zipdocdecode
+**.xlsx = zipdocdecode
+**.xlsm = zipdocdecode
+**.xltx = zipdocdecode
+**.xltm = zipdocdecode
+**.xlsb = zipdocdecode
+**.xlam = zipdocdecode
+**.pptx = zipdocdecode
+**.pptm = zipdocdecode
+**.potx = zipdocdecode
+**.potm = zipdocdecode
+**.ppam = zipdocdecode
+**.ppsx = zipdocdecode
+**.ppsm = zipdocdecode
+# OpenDocument (ODF)
+**.odt = zipdocdecode
+**.odt = zipdocdecode
+**.ods = zipdocdecode
+**.odp = zipdocdecode
+**.odb = zipdocdecode
+**.odg = zipdocdecode
+**.odf = zipdocdecode
+# other
+**.xps = zipdocdecode
+**.oxps = zipdocdecode
+**.epub = zipdocdecode 
 
 [bookmarks]
 track.current = True
+
+[subpaths]
+^git\+ssh://git@github\.com:([^/]*)/([^/]*)/([^/]*)$ = git+ssh://git@github.com:\1/\3.git
+
+
+
+
+[tortoisehg]
+vdiff = kdiff3
