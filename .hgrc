@@ -30,6 +30,7 @@ extdiff =
 largefiles = 
 pager =
 transplant = 
+schemes = 
  
 [encode]
 # Office Open XML
@@ -62,6 +63,8 @@ transplant =
 **.xps = zipdocencode
 **.oxps = zipdocencode
 **.epub = zipdocencode
+**.zip = zipdocencode
+**.jar = zipdocencode
  
 [decode]
 # Office Open XML
@@ -94,6 +97,8 @@ transplant =
 **.xps = zipdocdecode
 **.oxps = zipdocdecode
 **.epub = zipdocdecode 
+**.zip = zipdocdecode 
+**.jar = zipdocdecode 
 
 [bookmarks]
 track.current = True
@@ -106,3 +111,4 @@ track.current = True
 
 [tortoisehg]
 vdiff = kdiff3
+workbench.single = True

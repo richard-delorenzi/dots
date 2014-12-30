@@ -2,4 +2,4 @@ syntax: regexp
 
 #emacs backup files
 ~$
-/#.*#$
+/\#[^/]*\#$
