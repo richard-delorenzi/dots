@@ -130,7 +130,18 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias rmtil='rm *.~+([0-9])~'
+
+alias dirs="builtin dirs -v"
+function pushd {
+    builtin pushd "$@" > /dev/null
+    dirs
+}
+function popd {
+    builtin popd "$@" > /dev/null
+    dirs
+}
 alias rotd='pushd +1'
+
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -148,10 +159,16 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+function desktop {
+    activity=$(xprop -id $WINDOWID | sed -rn -e  's/^_KDE_NET_WM_ACTIVITIES\(STRING\) = "(.+)"/\1/pg')
+    desktop=$(xprop -id $WINDOWID | sed -rn -e  's/^_NET_WM_DESKTOP\(CARDINAL\) = (.+)/\1/pg')
+    echo "${desktop}-${activity}"
+}
+
 #alias edit='emacsclient --alternate-editor="" --no-wait $*'
 function edit {
     #this method gives a differant emacs server to each X11 virtual desktop
-    desktop=$(xprop -id $WINDOWID | sed -rn -e  's/_NET_WM_DESKTOP\(CARDINAL\) = ([^)]+)/\1/pg')
+    desktop=$(desktop)
     if test "z${desktop}" != "z"
     then
         server="desktop${desktop}"
