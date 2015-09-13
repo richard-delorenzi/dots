@@ -110,7 +110,7 @@ track.current = True
 ^git\+ssh://git@github\.com:([^/]*)/([^/]*)/([^/]*)$ = git+ssh://git@github.com:\1/\3.git
 
 [schemes]
-pgce = ssh://hg@bitbucket.org/richard-delorenzi_pgce/
+pgce = ssh://hg@bitbucket.org/richard_delorenzi_pgce/
 
 
 [tortoisehg]
