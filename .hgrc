@@ -32,8 +32,6 @@ pager =
 transplant = 
 schemes = 
 convert = 
-inotify = 
-zeroconf = 
  
 [encode]
 # Office Open XML
@@ -119,3 +117,6 @@ postpull = update
 workbench.single = True
 monitorrepo = localonly
 fullpath = True
+
+[alias] 
+emptycommit = !touch tmp ; $HG add tmp ; $HG commit tmp -m "<enter commit message>" ; $HG rm tmp ; $HG commit tmp --amend "$@"
