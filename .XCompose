@@ -1,5 +1,6 @@
 include "%L"   # import the default Compose file for your locale
 <Multi_key>  <asciitilde>  <asciitilde> : "≈"
-<Multi_key>  <*> <*> : "★"
+<Multi_key>  <asterisk> <asterisk> : "★"
 <Multi_key>  <Return> <Return> : "↵"
 <Multi_key>  <t> <k> : "✓"
+<Multi_key>  <asciicircum> <asciicircum> :"↟"
