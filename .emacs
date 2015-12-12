@@ -40,11 +40,12 @@
 ;(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
 ;      (add-hook hook (lambda () (flyspell-mode -1))))
 
-(add-hook 'c++-mode-hook
-          (lambda ()
-            (flyspell-prog-mode)
-            ; ...
-          ))
+;(add-hook 'c++-mode-hook
+;          (lambda ()
+;            (flyspell-prog-mode)
+;            ; ...
+;          ))
+
 
 ;;;GOTO line
 (global-set-key [(meta g)] 'goto-line)
@@ -208,6 +209,15 @@
 (autoload 'visual-basic-mode "visual-basic" "Visual-Basic" t)
 (setq auto-mode-alist (append '(("\\.\\(frm\\|bas\\|cls\\)$" . 
 				 visual-basic-mode)) auto-mode-alist))
+
+;; =================================================================
+;; - json
+;; =================================================================
+
+(add-to-list 'auto-mode-alist '("\\.json\\'" . 
+				 javascript-mode))
+
+
 
 ;; =================================================================
 ;; Version Control Systems
