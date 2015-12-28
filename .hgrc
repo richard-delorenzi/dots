@@ -118,5 +118,19 @@ workbench.single = True
 monitorrepo = localonly
 fullpath = True
 
-[alias] 
-emptycommit = !touch tmp ; $HG add tmp ; $HG commit tmp -m "<enter commit message>" ; $HG rm tmp ; $HG commit tmp --amend "$@"
+[color]
+custom.log-summary = red
+
+[alias]
+#An alias can start with an exclamation point (!) to make it a shell alias. A shell alias is executed with the shell and will let you run arbitrary commands.
+
+empty-commit = !touch tmp-bd72d9 ; $HG add tmp-bd72d9 ; $HG commit tmp-bd72d9 -m "This commit should be removed very quickly" ; $HG rm tmp-bd72d9 ; $HG commit tmp-bd72d9  --amend "$@"
+
+close-branch = commit --close-branch -m "close branch"
+
+#not in hg in debian wheezy
+;llog = log -r 0:tip -G --template "summary:{label('custom.log-summary',desc)}\nchangeset:{rev}:{node|short} ({phase})\ntags:{tags}\nuser:{author}\ndate:{date|isodate}\n\n{files}\n\n" 
+
+llog = log -r 0:tip -G --template "summary:{desc}\nchangeset:{rev}:{node|short} ({phase})\ntags:{tags}\nuser:{author}\ndate:{date|isodate}\n\n{files}\n\n" 
+
+rllog = ! $HG llog | tr '\\/' '/\\' | tac
