@@ -126,7 +126,7 @@ custom.log-summary = red
 
 empty-commit = !touch tmp-bd72d9 ; $HG add tmp-bd72d9 ; $HG commit tmp-bd72d9 -m "This commit should be removed very quickly" ; $HG rm tmp-bd72d9 ; $HG commit tmp-bd72d9  --amend "$@"
 
-close-branch = commit --close-branch -m "close branch"
+close-branch = commit --close-branch -m "close branch: $1"
 
 #not in hg in debian wheezy
 ;llog = log -r 0:tip -G --template "summary:{label('custom.log-summary',desc)}\nchangeset:{rev}:{node|short} ({phase})\ntags:{tags}\nuser:{author}\ndate:{date|isodate}\n\n{files}\n\n" 
@@ -134,3 +134,7 @@ close-branch = commit --close-branch -m "close branch"
 llog = log -r 0:tip -G --template "summary:{desc}\nchangeset:{rev}:{node|short} ({phase})\ntags:{tags}\nuser:{author}\ndate:{date|isodate}\n\n{files}\n\n" 
 
 rllog = ! $HG llog | tr '\\/' '/\\' | tac
+
+quick-merge = ! $HG merge "$1"; $HG commit -m "merge $1: $2"
+
+auto-move = addremove --similarity 100
