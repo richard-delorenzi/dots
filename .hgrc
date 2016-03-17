@@ -2,16 +2,17 @@
 ignore = ~/.hgignore
 
 [ui]
-username=richard.delorenzi
+username=mr-delorenzi
 merge = kdiff3
 
 [extensions]
 hgext.bookmarks =
-hgext.git = 
+#hgext.git =
+#hggit =
+git =
 color =
 relink = 
 bookmarks = 
-git = 
 progress =
 churn =
 rebase = 
