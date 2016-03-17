@@ -2,16 +2,17 @@
 ignore = ~/.hgignore
 
 [ui]
-username=richard.delorenzi
+username=mr-delorenzi
 merge = kdiff3
 
 [extensions]
 hgext.bookmarks =
-hgext.git = 
+#hgext.git =
+#hggit =
+git =
 color =
 relink = 
 bookmarks = 
-git = 
 progress =
 churn =
 rebase = 
@@ -32,8 +33,6 @@ pager =
 transplant = 
 schemes = 
 convert = 
-inotify = 
-zeroconf = 
  
 [encode]
 # Office Open XML
@@ -110,7 +109,7 @@ track.current = True
 ^git\+ssh://git@github\.com:([^/]*)/([^/]*)/([^/]*)$ = git+ssh://git@github.com:\1/\3.git
 
 [schemes]
-pgce = ssh://hg@bitbucket.org/richard-delorenzi_pgce/
+pgce = ssh://hg@bitbucket.org/richard_delorenzi_pgce/
 
 
 [tortoisehg]

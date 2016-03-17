@@ -140,7 +140,7 @@ function popd {
     builtin popd "$@" > /dev/null
     dirs
 }
-alias rotd='pushd +1'
+alias rotd='pushd -0'
 
 
 # Alias definitions.
